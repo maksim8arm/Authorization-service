@@ -17,8 +17,6 @@ public class UserRepository {
             authorities.add(Authorities.DELETE);
         } else if (user.equals("tom") && password.equals("321")) {
             authorities.add(Authorities.READ);
-        } else {
-            return new ArrayList<>();
         }
         return authorities;
     }
