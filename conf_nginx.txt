@@ -1,0 +1,16 @@
+upstream myserver {
+	server localhost:8080;	
+	}
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+	location / {
+            proxy_pass http://myserver;
+        }
+          
+	location /signin {
+            alias   H:\Netologia\SpringBoot\02_AuthorizationService;
+            index authorizSer.html;
+        }
